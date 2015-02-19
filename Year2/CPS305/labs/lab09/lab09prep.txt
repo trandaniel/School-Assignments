@@ -1,0 +1,14 @@
+CPS305 Lab09 - prep
+
+For Fall 2014: 
+    Lab09 is submitted in your regular lab time (Nov 24 and 26). 
+
+
+A) The following programs are given in this directory:
+      OpenAddrHash.c   - implementation of hasing ADT
+      OpenAddrHash.h   - header for hashing ADT
+      lab09L.c         - a main program that uses a hash table
+ 
+   Compile these into executable lab09L and run it. Understand what it does.
+   It uses open addressing with linear probing. Understand how it works,
+   particularly how the slot gets decreased by 1 each probe.

@@ -1,0 +1,11 @@
+Edit this in appropriately:
+
+     NAME: Daniel Tran 
+     UID:  d45tran 
+     Sec:  02
+     SID:  500554290 
+     TAs:  Haleh Khjasteh, Mohammad Shahnoor Islam Khan 
+     LAB:  Monday 1pm - 2pm
+     Submit Person: Ming Him Tong - mhtong
+     Other Members: a36tam
+

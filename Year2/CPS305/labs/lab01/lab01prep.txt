@@ -1,0 +1,45 @@
+Lab01 - preparation
+-------------------
+Do this before you attend your lab01. Be prepared because in lab01 you will be asked 
+to do a different problem and to submit it during the lab.
+
+
+1.  Look at the Sum of Squares example(s) in your textbook (starting at end of page 64).
+   Understand the pseudo-code and programs.
+   
+2. Copy the following files to your own space, and look at the code:
+   
+   SumSquares.c     -- the code from Program 3.4 of the text, which I copied from
+                       /usr/courses/cps305/standish.source.code/Ch3programs.txt
+   SumSquares.h     -- an include file for any program wishing to call the SumSquares function
+   SumSquaresTest.c -- a main program to call SumSquares with a variety of input
+   
+3. Create executable and run the program to check it works.  If you forgot how, see below.
+
+4. Some tests in SumSquaresTest.c are there to test the base case. Identify these tests.
+
+5. Modify the driver program (SumSquaresTest.c) to try other input. Run and check it works.
+   Try testing it for extremely large input, and invalid input, and see what happens.
+
+------------------------------------------------------------------------
+                       C O M P I L E
+------------------------------------------------------------------------
+
+   COMPILE (separately):
+      gcc -c SumSquares.c
+      gcc -c SumSquaresTest.c
+   
+   LINK the object code into an executable called SumSquaresTest:
+      gcc -o SumSquaresTest SumSquaresTest.o SumSquares.o
+   
+   RUN the executable:
+      ./SumSquaresTest
+   
+   
+   Note: you could have compiled, created executable, and run it by: 
+   
+      gcc SumSquaresTest.c SumSquares.c
+      ./a.out
+    or
+      gcc -o SumSquaresTest SumSquaresTest.c SumSquares.c
+      ./SumSquaresTest

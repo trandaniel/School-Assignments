@@ -1,0 +1,63 @@
+Lab 06
+-------
+
+For Fall 2014: 
+    DO NOT ATTEND LABS this week (Nov 3 and Nov 5). 
+    This Lab06 will be due next week (Nov 10 and 12).
+
+
+The template for your lab06answers.txt file is given in this directory.
+Copy it into your filespace, and complete it by replacing "XXXX" with
+the appropriate text.
+
+
+For all questions:
+  -Once the insertion/deletion is complete, do a level-order traversal 
+   of the resulting tree, putting a dot between keys like in lab06prep.txt.
+  -DO NOT put any spaces in your traversal
+  -Enter your level-order traversal into the appropriate place in file
+   lab06answers.txt  (replace appropriate "XXXX")
+   Each line in lab06answers.txt must have the correct FORMAT, or it 
+   will be considered incorrect.  The format is: 
+   question number (i.e., Q1) followed by colon followed by the traversal followed by a newline
+   Note that question Q1 was already completed for you.
+   Note that there are no spaces in the answer lines.
+
+Q1:
+  Note: This question was already answered for you in lab06answers.txt
+        so that you can double-check the format of your answer.
+  Do an level-order traversal of the 2-3 tree (B-Tree order 3) in:
+  http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/NOTES/trees/BTree1.jpg
+  Type the level-order traversal into lab06answers.txt using the FORMAT 
+  shown above. 
+
+
+Q2:
+  Insert 95 into the 2-3 tree (B-Tree order 3) in:
+  http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/NOTES/trees/BTree1.jpg
+  Use "rotation with sibling" WHEN POSSIBLE; otherwise use node splitting (push up to parent). 
+  THEN, insert 93 into the resulting B-tree.
+  Use "rotation with sibling" WHEN POSSIBLE; otherwise use node splitting (push up to parent). 
+  After the insertions, type the level-order traversal of the final tree into
+  lab06answers.txt using the FORMAT shown above (replacing the "XXXX" on line 2).
+
+
+Q3: 
+  Delete 70 from the ORIGINAL 2-3 tree (B-Tree order 3) in:
+  http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/NOTES/trees/BTree1.jpg
+  Do the deletion using the method described in class--but you must use the inorder PREDECESSOR
+  as the replacement key.
+  After the deletion, type the level-order traversal of the resulting tree into
+  lab06answers.txt using the FORMAT shown above (replacing the "XXXX" on line 3).
+
+Q4: 
+  Delete 70 from the ORIGINAL 2-3 tree (B-Tree order 3) in:
+  http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/NOTES/trees/BTree1.jpg
+  Do the deletion using the method described in class--but you must use the inorder SUCCESSOR
+  as the replacement key.
+  After the deletion, type the level-order traversal of the resulting tree into
+  lab06answers.txt using the FORMAT shown above (replacing the "XXXX" on line 4).
+
+SUBMIT FILE:
+lab06answers.txt (your completed version!)
+

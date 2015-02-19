@@ -1,0 +1,72 @@
+Lab 08
+------
+
+For Fall 2014: 
+    Lab08 is submitted in your regular lab time (Nov 17 and 19). 
+
+
+For this lab use MIN HEAPS and ALGORITHMS FOR MIN HEAPS that you figured out in lab08prep.txt
+
+e.g., 
+   this is a MIN heap:
+   -------------------
+
+            7
+         /     \
+        9      12
+      /  \    /  \
+     14  10  16  15
+    /
+   20
+
+   Array Implementation:
+   --------------------
+   This heap, implemented in an array is stored follows (see notes T-35)
+    A[1]=7, A[2]=9, A[3]=12, A[4]=14, A[5]=10, A[6]=16, A[7]=15, A[8]=20
+   
+   CSF:
+   ----
+   It can be written in comma-separated-form (CSF) as:
+   7,9,12,14,10,16,15,20,
+
+Starting Arrays:
+---------------
+[a-e]: 10,9,8,7,6,5,4,3,2,1,
+[f-j]: 9,10,7,6,5,8,4,3,1,2,
+[k-o]: 7,10,11,9,8,6,5,4,1,2,3,
+[p-t]: 15,11,9,10,8,6,5,4,1,3,2,
+[u-z]: 11,14,9,8,10,6,4,5,2,3,1,
+
+
+
+What to do for the lab:
+-----------------------
+
+0. Copy lab08answers.txt into your own filespace.
+   You will modify it by replacing "XXXX" (see below.)
+
+1. Determine your starting array: it is the one corresponding to the first 
+   letter of your CS linux login name. For example, your prof's CS linux 
+   login name is "dwoit", so she looks for the array for "d". Thus, her 
+   array is the one for [a-e].
+   Enter your array, in CSF, into lab08answers.txt, replacing "XXXX" (no spaces!).
+
+2. Draw the binary tree corresponding to your array, using the usual
+   scheme (the node in position x of array has left-child in position x*2 and
+   right-child in position x*2+1 of array. Root is in position 1 of array.
+
+   Transform your array/tree into a MIN heap using the algorithm from your notes
+   on page T-34 (modified for MIN heaps). 
+   Enter your MIN heap, in CSF, into lab08answers.txt, replacing "XXXX" (no spaces!)
+   
+3. Consider your MIN heap from answer 2 above.
+   Insert 0 (the integer zero) into your MIN heap using the algorithm on page T-33,
+   (modified for MIN heaps).
+   Enter your resulting MIN heap, in CSF, into lab08answers.txt, replacing "XXXX" (no spaces!)
+
+4. Consider your MIN heap from answer 2 above (NOT answer 3!!)
+   Remove an item (the root) from the heap, using algorithm on page T-31/T-32 (modified
+   for MIN heaps).
+   Enter your resulting MIN heap, in CSF, into lab08answers.txt, replacing "XXXX" (no spaces!)
+
+5. submit lab08answers.txt using the usual submit program

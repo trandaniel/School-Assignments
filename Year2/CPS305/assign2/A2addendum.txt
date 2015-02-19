@@ -1,0 +1,12 @@
+Sep 26:
+  Requirement was added that frog cannot do the same kind of hop
+  twice in a row. 
+
+Q: Does the Pond need to be dynamically allocated? 
+A: Yes. (A2.txt has been modified)
+
+Q: Do we need to follow the algorithms exactly?
+A: Yes. Obviously you will have to add to them, but the existing logic
+   in A2.txt must be followed.
+
+

@@ -1,0 +1,24 @@
+Lab 03 preparation
+------
+
+Consider the code in findTest.c
+The find function looks for an item in the array A, from A[0] to
+A[max_index] inclusive. If the item is not found, -1 is returned.
+If the item is found, the item's index in A is returned.
+
+1. 
+  Look at the code in findTest.c and understand it.
+  Compile and run it. Try changing main by using different values
+  and sizes for A, and searching for different items.
+  
+2.
+  Consider the case in which the item is NOT FOUND in A.
+  Let the problem size, n, be: 
+      the NUMBER of elements of A that are COMPARED to item.
+  For example, for find(i,A,8) n=9 (9 elements are considered: A[0],A[1],...A[9])
+               for find(i,A,4) n=5 (5 elements are considered: A[0],A[1],...A[4])
+
+  Consider the recurrence relation for S(n), the space used when the item
+  is NOT FOUND.  The base case is S(0). Why do we use 0?
+  Write the complete base case, and the recursive case for the recurrence relation.
+

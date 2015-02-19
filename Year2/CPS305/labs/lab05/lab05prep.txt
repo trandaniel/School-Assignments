@@ -1,0 +1,10 @@
+Lab 05
+------
+
+Understand how to do different kinds of tree traversals.
+
+Understand searching, inserting and deleting from BSTs.
+
+Understand how to calculate the final result expressed by an expression tree.
+
+

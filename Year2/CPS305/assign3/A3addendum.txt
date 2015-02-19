@@ -1,0 +1,32 @@
+Nov 13:
+Q: 
+  The given code for assignment 3 isn't really well commented.
+  Do you know what the "LessKeys" case means?
+A:
+  Figuring out what the code is doing (and is trying to do) is 
+  part of the assignment.
+Nov 14:
+Q:
+  With regards to question #3 from assignment 3. The description says 
+  that the function prints the total number of keys in the tree. 
+  Is it acceptable if I make the function return an integer and use
+  "printf" to print the number of keys instead, or do I have to print 
+  the number of keys directly from within the function.
+A:
+  Your function must print the total number of keys. However, the
+  function could (should?) use a helper-function which returns the 
+  appropriate integer.
+
+Nov 20:
+Q:
+  Can we have two separate methods for the Max and Min question for
+  Assignment 3? Or do we have to have them both in the same method?
+A:
+  Either way. Two is fine.
+
+Q:
+  Do we need still to provide header comments on the functions
+  that were already been given to us? Also, do we have to explain everything
+  that is happening inside those functions?
+A:
+  No. Just explain your modifications, if complicated.

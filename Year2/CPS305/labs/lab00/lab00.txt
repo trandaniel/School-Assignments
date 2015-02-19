@@ -1,0 +1,26 @@
+Lab00 
+-----
+Your programs must always verify requests for storage were successful.
+If malloc returns NULL, print an error message and terminate the program.
+
+1. Write a program named lab00.c that creates a struct to hold a node
+   with fields Airport and Link, as shown in the diagram near the bottom
+   of page 37. The program should then create variables L and N, and 
+   set up the complete diagram as shown near the bottom of page 37.
+2. By hand, complete Exercise 2 on page 38, and then verify your answers
+   as follows:
+   Modify your code from question 1 above so that it verifies your answers  
+   to Exercise 2 using printf statements. For example, to verify 
+     (i) a pointer to the node containing MIA
+   you write code to follow your pointer expression and print MIA from
+   the pointer's Airport field.
+3. Submit your lab00.c using the submit program, as in:
+   submit-cps305dwoit lab00.c
+4. Check that the file was received by running the program:
+   check-submit-cps305dwoit 
+
+5. If you have finished the above, continue to work on the remaining exercises 
+   in Section 2.4. Once you finish them, write programs to check your answers.
+   If you finish that, then modify all your programs to use function AddNode
+   to create the list, and function PrintList to print the Airport codes in a 
+   list.

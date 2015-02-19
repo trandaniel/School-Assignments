@@ -1,0 +1,44 @@
+Lab 02
+------
+
+Consider the function below to reverse the substring of S from position i to j.
+
+Examples:
+---------
+      if S were defined as:  char S[]="abcdefg";
+      then 
+           revS( S, 0, strlen(S)-1 ); changes original S to: "gfedcba"
+           revS( S, 3, 4 );           changes original S to: "abcedfg"
+           revS( S, 3, 3 );           does not change original S
+
+Function:
+---------
+
+void revS(char *S, int a, int b) {
+  int i,j;
+  i=a;
+  j=b;
+  char temp;
+  while (i<j) {
+     temp=S[i];
+     S[i]=S[j];
+     S[j]=temp;
+     i++;
+     j--;
+  }
+}
+
+
+1. Write a program with a main function that calls revS in order to
+   reverse the entire string. Run it to make sure it works.
+   Try calling revS with various values for the arguments.
+
+2. When considering time complexity for revS, the SIZE of the problem is
+   the length of the substring being reversed. Thus n=(b-a). 
+   Explain why.
+
+3. Figure out time complexity for revS as a function of n, using values 
+   such as k1, k2, etc., for the final constant values. 
+   Your final answer should be something like: k1*n + k2
+
+4. What is the time complexity in big-O notation?

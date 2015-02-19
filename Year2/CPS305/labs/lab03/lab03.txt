@@ -1,0 +1,57 @@
+Lab 03
+------
+
+Consider the code in findTest.c
+The find function looks for an item in the array A, from A[0] to
+A[max_index] inclusive. If the item is not found, -1 is returned.
+If the item is found, the item's index in A is returned.
+
+Question 0:
+----------
+  Create a file named lab03Answers.txt and type your answers to the following
+  questions into it.
+
+
+Question 1:
+----------
+
+Consider the case in which the item is NOT FOUND in A.
+Let the problem size, n, be: 
+    the NUMBER of elements of A that are COMPARED to item.
+For example, for find(i,A,8) n=9 (9 elements are considered: A[0],A[1],...A[9])
+             for find(i,A,4) n=5 (5 elements are considered: A[0],A[1],...A[4])
+
+Consider the recurrence relation for S(n), the space used when the item
+is NOT FOUND.  The base case is S(0). 
+Write the complete base case, and the recursive case for the recurrence relation.
+Type your answer into file lab03Answers.txt
+
+
+Question 2:
+----------
+
+Unroll your recurrence relation from Question 1, to obtain the complexity
+class for space used by find when the item is not found, and problem size
+is n (defined as in Question 1). Type your answer into file lab03Answers.txt
+
+
+Submit:
+-------
+lab03Answers.txt  (contains your answers to Questions 1 and 2)
+
+-----------------------------------------------------------------
+If you finish this lab early, work on the following problems:
+1. What is the space used when the item is FOUND, in the best case (i.e.,
+   the least amount of space is required). For the best case to hold,
+   in what position must the item be found?
+
+
+2. What is the space used when the item is FOUND, in the worst case (i.e.,
+   the most amount of space is required.) For the worst case to hold,
+   in what position must the item be found? Give the recurrence relation
+   and unroll it to find S(n).
+
+
+3. Calculate the average space used when an item is FOUND. (Do a true average,
+   by taking the average of all possibilities).
+

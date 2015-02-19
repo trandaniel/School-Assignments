@@ -1,0 +1,18 @@
+
+int small(int a) {
+  //ASSUME a>0 always
+  int i=a;
+  int j=0;
+  int x=0;
+  int y=0;
+  int z;
+  for (;i>0;i--) {
+     x=x-i;
+  }
+  for (;j<=a;j++) {
+     y=y+j;
+  }
+  z=x+y;
+  return z;
+}
+

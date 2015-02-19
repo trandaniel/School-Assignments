@@ -1,0 +1,47 @@
+Lab00 - preparation
+-------------------
+Do this before you attend your lab00. Be prepared because in lab00 you will be asked 
+to do a different problem and to submit it during the lab.
+
+
+1. Read the part of Chapter 2 of your text that covers Pointers (pages 27-37 --
+   start where it says "Pointers Defined") 
+   NOTE: these pages of your text are available in file standish_Ch2_pointers.pdf
+         and online here: http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/Labs/Lab00/standish_Ch2_pointers.pdf
+         (in case you don't have your textbook yet.)
+
+2. There are Questions and Answers on page 29-30. 
+   a. Answer the questions yourself first. 
+   b. When you're done, check your answers against the given Answers.
+
+3. Section 2.3 has some Exercises (page 33). 
+   a. By hand, answer Exercises 1 and 2 
+   b. Write programs to check your solutions to Exercise 1 and 2. If you forget
+      how to compile and run a C program on Linux, see below.
+   
+4. Write programs to answer Exercises 3 and 4 in Section 2.3 (page 34).
+   Remember ctrl-c will abort a running program.
+   If your program from Exercise 3 seems to run for too long, abort it, and
+   try it with the [1000] replaced by some larger number, like [10000].
+
+5. Section 2.4 (page 37) has some Exercises. 
+   a. By hand, answer Exercise 1 
+   b. Write a program that sets up the diagram shown near the bottom of page 37
+      (variables L and N and the 4 nodes). Define a node to be a structure
+      containing fields Airport and Link, as shown.
+      Use strcpy to get values into the Airport fields.
+   c. Check your answers to part a above (Exercise 1) by writing code to
+      display the correct answers.
+   d. Answer Exercise 3 by hand. Then write a complete C program to 
+        -set up the original diagram (near bottom of page 37), 
+	-do the changes asked in Exercise 3
+        -print the airport codes in order (should print ORD, MIA, GCM, MEX)
+	 by looping through the modified list.
+----------------------------------------------------------------------------
+COMPILING and RUNNING programs in C:
+
+To compile and run a program where all functions, including main, are in 1 file:
+
+  gcc thefile.c
+  ./a.out
+

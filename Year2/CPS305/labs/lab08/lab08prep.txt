@@ -1,0 +1,61 @@
+Lab 08 - preparation
+--------------------
+
+For Fall 2014: 
+    Lab08 is submitted in your regular lab time (Nov 17 and 19). 
+
+
+
+Definition:
+-----------
+The heaps discussed in class were MAX heaps (maximum item is in root).
+
+A MIN heap is similar, except that the heap is organized so that the
+minimum item is in the root.  The definition of a MIN heap is:
+    -complete binary tree
+    -each node has key >= its parent key
+
+This is similar to the definition of a MAX heap given in page T-30 of notes:
+http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/NOTES/trees/
+
+e.g., 
+   this is a MIN heap, H:
+   -------------------
+
+            7
+         /     \
+        9      12
+      /  \    /  \
+     14  10  16  15
+    /
+   20
+
+   Array Implementation:
+   --------------------
+   This heap, implemented in an array is stored follows (see notes T-35)
+    A[1]=7, A[2]=9, A[3]=12, A[4]=14, A[5]=10, A[6]=16, A[7]=15, A[8]=20
+   
+   CSF:
+   ----
+   The array-based heap can be written in comma-separated-form (CSF) as:
+   7,9,12,14,10,16,15,20,
+
+
+1. Consider the algorithms discussed in class for heaps:
+     -remove, reheapify, insert, building a heap from n unsorted items, etc.
+   These were done for MAX heaps. Consider how you would do these for MIN
+   heaps instead. Then do questions below, using your modified algorithms.
+
+2. Try inserting 2 into the MIN heap, H, above.
+   Your resulting heap should be:
+   2,7,12,9,10,16,15,20,14,
+
+3. Try removing from the MIN heap, H, above. (always remove root)
+   Your resulting heap should be:
+   9,10,12,14,20,16,15,
+
+4. Try building a MIN heap from these 8 unsorted items:
+   9,7,4,5,2,3,1,0
+   Your resulting heap should be:
+   0,2,1,5,9,3,4,7,
+   

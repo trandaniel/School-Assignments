@@ -1,0 +1,118 @@
+Lab 06 prep
+-----------
+
+Understand B-trees from class, including insertion and deletion.
+
+In the B-tree below, to indicate X and Y are IN THE SAME NODE, 
+we use notation:
+        X-Y or X--Y or X---Y etc.
+
+
+
+                     I---N
+                   /   |    \
+                  /    |     \
+                 /     |      \
+                /      |       \
+               /       |        \
+              /        |         \
+            D          K           Q
+           / \        / \         / \
+          /   \      /   \       /   \
+        A-B   E-G   J     M     P   S--T
+
+
+A LEVEL-ORDER traversal of the above B-tree is:
+I.N.D.K.Q.A.B.E.G.J.M.P.S.T
+
+Question:
+Q0: Do a level-order traversal of the tree at the bottom of page:
+    http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/NOTES/trees/T17.gif
+    Use a dot between keys, as above.
+    Type your level-order traversal on one line, preceded by "Q0:"
+
+
+TRY THE TRAVERSAL FIRST, then... 
+look at the last line of this file to see the solution:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q0:10.20.5.7.15.30.57.2.6.8.9.11.17.25.29.40.59

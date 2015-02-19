@@ -1,0 +1,153 @@
+CPS305 Assignment 3
+
+No extensions will be given.  No late assignments are accepted.
+
+This file may be copied only by a current CPS305 student, and only to
+her/his personal space for use in this course. It may never be placed in
+any public domain, nor in any place accessible by anyone other than the
+single CPS305 student who copied it.
+
+Consult A3addendum.txt for changes to these requirements, as
+modifications/clarifications may be made at any time and are part of
+this assignment.
+
+Assignment is done in groups of 1, 2 or 3 people. 
+There is no marking penalty for working in a group. 
+------------------------------------------------------------------------
+
+Topics:
+------
+  2-3 Trees
+
+Platform:
+--------
+  The CS moons
+
+Files:
+-------
+  btree.c             (given. You modify it)
+  A3cert.txt          (copy it from A2cert.txt. Edit it correctly)
+  A3member.txt        (copy it from A2.member.txt. Edit correctly--will vary by member)
+
+Submit Files:
+------------
+  Designate ONE PERSON in your group to be the submit-person
+  Note carefully what each person submits:
+ 
+  A3member.txt  EVERY group member submits own (including submit person)
+  btree.c       ONLY SUBMIT PERSON submits this
+  A3cert.txt    ONLY SUBMIT PERSON submits this
+
+
+Background:
+-----------
+A 2-3-tree is a B-tree of order 3. B-trees are used extensively in
+Computer Science applications. e.g., databases, filesystems, indexing.
+Many open-source implementations of B-trees are available online. One 
+such implementation has been saved into file btree.c
+
+btree.c works fine, mostly, on the CS moons.
+For example, the input in file good_input1 works fine on thebe. 
+You can verify this by compiling the program and running it with that input:
+   > gcc btree.c
+   > cat good_input1 | ./a.out
+
+However, note that these input files may fail on thebe:
+   bad_input1  and bad_input2 
+
+
+Instructions:
+-------------
+Examine the code in btree.c to understand how it works. 
+Modify btree.c in order to answer the questions below. You may modify the 
+2-3-tree data structure, IF necessary.
+Your program must adhere to all the information above and below. 
+
+
+1. Fix the code so that the program will work properly for any valid input,
+   such as that in bad_input[12].
+
+2. Add this to the menu, and implement it:
+   6. Enumerate
+
+   This function prints each key in the 2-3-tree, in sorted order on a 
+   single line, with keys separated by one space.
+   It does this using an in-order traversal.
+
+3. Add this to the menu, and implement it:
+   7. Total Keys
+
+   This function prints the total number of keys in the tree.
+   It does this by examining the current tree. DO NOT implement this by 
+   updating a counter upon each insert/delete!
+  
+4. Add this to the menu, and implement it:
+   8. Min and Max Keys
+
+   This function prints the value of the smallest key in the tree AND
+   the value of the largest key in the tree, with keys on a single
+   line, separated by a space.
+   It does this by examining the current tree. DO NOT implement this by 
+   updating max/min variables with each insert/delete!
+   If the tree is empty, print "tree is empty"
+
+5. Add this to the menu, and implement it:
+   9. MaxLevel
+
+   This function prints the maximum level in the tree, assuming 
+      -the root is at level 0
+      -the level under the root is level 1, etc. e.g., for the first
+       tree printed for good_input1, MaxLevel is 2.
+   This may be implemented by updating counter appropriately, with each
+   inset/delete, if you wish.
+   If the tree is empty, print "tree is empty"
+  
+6. Modify the "Delete" functionality so that "borrow-from-sibling"
+   is properly implemented for both sides. i.e., if one sibling is too 
+   small, it uses the other sibling (if that sibling is large enough.)
+
+
+Robustness and Assumptions:
+--------------------------
+  Assume storage is always available (e.g., assume malloc never returns NULL).
+  Assume user input is always valid. 
+
+Grading:
+--------
+ On a CS moon only, we will compile and run your btree.c with input of
+ our choice.
+
+ -The assignment mark IS ZERO for:
+   -incorrectly named files (includes case!!)
+   -A3cert.txt missing or incorrectly filled-in
+   -A3member.txt missing or incorrectly filled-in for any group member
+   -code does not compile
+   -code compiles, but is not a good attempt at solving the problem
+    (too simplistic, etc.)
+
+ If not zero, then the mark includes, but is not limited to, the
+ following. Note that if the submission is incomplete, then the
+ Style/Documentation mark is also reduced accordingly.
+ 
+
+ -Style and Documentation (20%)
+    -applies to your new code and your modified sections of code.
+    -simple, clear, readable code
+    -function header comment
+    -internal documentation only of complicated parts
+    -indentation, formatting, use of whitespace (indent with either tabs
+     or spaces, but not both mixed). Your code should look properly
+     formatted when displayed with moon "cat" command.
+    -meaningful, consistent function and variable names
+    -modularity
+       Good use of helper functions.  If a task is repeated, use a helper
+       function, NOT (nearly) duplicate code.  If a function is too long,
+       consider dividing it into sub-functions, even if they are called
+       only once. Too long is about 30LOC
+
+ -Functionality (80%)
+    -correctness (when following assignment instructions)
+     Your function may produce required results, but will be worth nothing
+     unless it does so by following assignment instructions/requirements.
+    -correctness is measured ONLY by the grader's own tests.
+

@@ -1,0 +1,21 @@
+Lab 02
+------
+
+Your TA will tell you what XXXX is for your particular lab. 
+
+0. Create a file called lab02Answer.txt and type your solutions
+   to the questions below into it.
+
+1. What was the name of your function (given in file XXXX)?
+
+2. For time complexity for function XXXX, what is the size of the problem? 
+   (i.e., what is "n"?)
+
+3. Calculate the time complexity for your function as a function of n. 
+   Show your work.
+   Write a final version of your function using generic names such as 
+   k1, k2, etc., for the final constants. 
+
+4. Give the complexity in Big-O notation for time complexity.
+
+5. Submit lab02Answer.txt 

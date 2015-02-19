@@ -1,0 +1,148 @@
+CPS305 Assignment 1
+
+No extensions will be given.  No late assignments are accepted.
+
+This file may be copied only by a current CPS305 student, and only to 
+her/his personal space for use in this course. It may never be placed in 
+any public domain, nor in any place accessible by anyone other than the 
+single CPS305 student who copied it.
+
+Consult A1addendum.txt for changes to these requirements, as 
+modifications/clarifications may be made at any time and are part of
+this assignment.
+
+Assignment is done individually. No groups.
+------------------------------------------------------------------------
+
+Topics: 
+------
+  pointers, structures, lists, variable argument lists
+
+Platform:
+--------
+  The CS moons
+
+Files: 
+-----
+  poly_ADT.c          (you write and submit)
+  poly_ADT.h          (given)
+  poly_example_main.c (given) Provided to help you test your code; 
+                              however, your code will be tested with 
+                              various main programs.
+  A1cert.txt          (you edit and fill-in blank)
+
+Submit Files: 
+------------
+  poly_ADT.c
+  A1cert.txt          (correctly edited and filled-in)
+
+Submit Programs: 
+------------
+     submit-cps305dwoit filename   #submit file named filename
+     check-submit-cps305dwoit      #list submitted files
+
+Bonus:
+-----
+  Function poly_add can be implemented 2 ways. The simple implementation
+  still gets full assignment marks. The correct implementation gets
+  up to 10 bonus percent. i.e., if the assignment is marked out of
+  100, then a perfect assignment with the simple poly_add implementation
+  gets maximum 100 marks; a perfect assignment with the correctly 
+  implemented poly_add gets a maximum mark of 110/100.
+
+Instructions:
+------------
+
+Implement a polynomial ADT. The polynomial datastructure must use
+the given definition; thus, a polynomial is implemented as a linked 
+list of terms.
+
+File poly_ADT.h (given) contains: 
+     -data structure definitions for polynomials
+     -function prototypes for operations on polynomials
+
+You implement the functions in file poly_ADT.c as follows:
+
+poly *poly_create (num,...) ;
+  return a new polynomial with num terms
+  terms are listed in order of lowest ordered-term to highest.
+  i.e., to initialize poly  15x^6 + -9x^4 + 3x^2
+  call poly_create(3, 3,2,  -9,4,  15,6 );
+  For implementing functions with variable number of arguments,
+  use stdarg.h. Refer to online documentation, such as: 
+  http://www.tutorialspoint.com/cprogramming/c_variable_arguments.htm
+
+void poly_free (poly **P) ;
+  free all dynamically allocated storage for P and set P to NULL
+
+void poly_print (poly *P) ;
+  print P from hightest- to lowest-ordered terms, as in: 
+  15x^6 + -9x^4 + 3x^2
+
+poly *poly_duplicate (poly *P ) ;
+  return a duplicate of polynomial P. 
+  return a new poly, NOT a reference. 
+
+poly *poly_scalar_mult(poly *P, int x) ;
+  return a new poly that is the same as P, except that each 
+  coefficient is multiplied by x
+
+poly *poly_add (poly *P1, poly *P2) ;   
+  Correct implementation (BONUS MARKS):
+    return a new poly that is the sum of P1 and P2
+    i.e., sum of these two
+              15x^6 + 1x^4 + 2x^2 + 1x^1
+              10x^5 + 2x^4 + -3x^2
+          is: 15x^6 + 10x^5 + 3x^4 + -1x^2 + 1x^1
+  Simple implementation (regular marks):
+    return a new poly with zero terms.
+
+
+Robustness and Assumptions:
+--------------------------
+  Assume main will always call functions with arguments that are 
+  correct in number, type, and ordering. Thus, assume:
+  Arguments to poly_create will always be given in order from 
+  lowest to highest term, and that the correct number of 
+  arguments will always be provided. Polynomial coefficients 
+  will always be given as integers.
+
+Grading:
+--------
+ On a CS moon only, we will compile and run your poly_ADT.c with the 
+ given poly_ADT.h and our own main programs.
+
+ -The assignment mark IS ZERO for:
+   -incorrectly named files (includes case!!)
+   -A1cert.txt missing or incorrectly filled-in
+   -code does not compile 
+   -code is incompatible with our main programs and/or given .h file
+   -code compiles, but is not a good attempt at solving the problem
+    (too simplistic, etc.)
+
+ If not zero, then the mark includes, but is not limited to, the 
+ following. Note that if the submission is incomplete, then the
+ Style/Documentation mark is also reduced accordingly.
+
+ -Style and Documentation (20%)
+    -simple, clear, readable code
+    -function header comment
+    -internal documentation only of complicated parts
+    -indentation, formatting, use of whitespace (indent with either tabs
+     or spaces, but not both mixed). Your code should look properly 
+     formatted when displayed with moon "cat" command.
+    -meaningful, consistent function and variable names
+    -modularity 
+       Good use of helper functions.  If a task is repeated, use a helper 
+       function, NOT (nearly) duplicate code.  If a function is too long, 
+       consider dividing it into sub-functions, even if they are called 
+       only once. Too long is about 30LOC
+
+ -Functionality (80%)
+    -correctness (when following assignment instructions)
+     Your function may produce required results, but will be worth nothing
+     unless it does so by following assignment instructions/requirements.
+    -correctness is measured ONLY by the grader's own tests. 
+     Grader will compile your functions with her/his own main programs,
+     which will be more extensive than the example given. 
+

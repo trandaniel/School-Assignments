@@ -1,0 +1,27 @@
+Lab 04 
+-------
+
+Directory code_from_text/ contains the following files from Section 7.8 of your text:
+
+   QueueImplementation.c
+   QueueTypes.h
+   QueueInterface.h
+Minor changes were made to these files, such as:
+   -definition of SystemError function
+   -return codes for Insert and Remove
+   -the Queue holds integer items
+
+0. Your TA will tell you what XXXX is for this lab.
+
+1. Create a driver program named QueueDriver.c to test the Queue implementation.
+   QueueDriver.c should have the functionality outlined in file XXXX.
+
+2. Use separate compilation to create QueueImplementation.o and QueueDriver.o
+   Compile Queue*.o into an executable called QueueDriver
+   Make sure your QueueDriver works!
+
+
+
+3. Submit Files:
+     QueueDriver.c
+     QueueDriver

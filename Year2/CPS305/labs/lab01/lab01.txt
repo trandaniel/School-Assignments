@@ -1,0 +1,47 @@
+Lab01 
+------
+
+0. Your TA will tell you what XXXX is for your particular lab. 
+   Possibilities for XXXX include, but are not limited to:
+   GOING-UP 
+   GOING-DOWN
+   EDGES-AND-CENTER
+   DIVISION-IN-HALVES
+
+1. In a file named Prod.c, write a XXXX RECURSIVE function 
+   Prod(int x, int y) that 
+   computes the product of the numbers from x to y inclusive. 
+   e.g., Prod(8,8) returns 8; Prod(10,11) returns 110; Prod(2,5) returns 120
+
+   Your function may assume: 
+     x and y are both positive integers, and
+     x<=y 
+
+   Make sure your function compiles correctly.
+
+2. Insert the following line at the top of Prod.c, with XXXX 
+   replaced appropriately:
+   /* This function uses XXXX recursion */
+
+3. Write a file Prod.h necessary to use your function
+
+4. Write a main program called ProdTest.c that tests your function.
+   Make sure you test at least:
+     ALL your base cases, 
+     any "special" cases you might have, 
+     your recursive case.
+   For base cases and special cases, your test must call Prod with
+   arguments that cause the case to occur on the FIRST call.
+
+5. Submit your files: ProdTest.c, Prod.c, and Prod.h 
+   Note:
+     Submit with:
+        submit-cps305dwoit <filenames>
+     Check submit directory with:
+        check-submit-cps305dwoit
+
+6. If you complete you lab, write programs to answer questions from 
+   Section 3.2 of the text. These questions are available in this
+   directory as file: standish_recursion_exercises.pdf
+   or on the class notes page at:
+   http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/NOTES/standish_recursion_exercises.pdf

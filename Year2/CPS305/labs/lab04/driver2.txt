@@ -1,0 +1,25 @@
+QueueDriver.c should have the following functionality:
+
+   a) create and initialize an empty Q.
+       i) check that the Q is empty (using function Empty )
+   b) insert integers 1, 2, 3, 4, 5, 6, 7 onto the Q USING A LOOP, each time
+       i) check Insert returns correct code (success)
+      ii) check that the Q is not empty (using function Empty)
+   c) remove SIX integers from the Q one at a time USING A LOOP, each time
+       i) check Remove returns correct (success) code
+      ii) check the correct integer is "removed" by Remove
+     iii) check the Q is not empty (function Empty)
+   d) remove the LAST integer from the Q
+       i) check that the correct integer was removed.
+      ii) check that the Q is empty (using function Empty)
+   e) try removing an integer from the empty Q
+       i) check Remove returns correct code (failure)
+      ii) check that the Q is still empty (using function Empty)
+   f) try removing an integer AGAIN from the empty Q
+       i) check Remove returns correct code (failure)
+      ii) check that the Q is still empty (using function Empty)
+   g) If all tests are successful, QueueDriver prints "Tests Successful"
+      If any tests fail, info is printed about the failure. e.g.,
+         Insert returned 0 but expected 1
+         Remove got a 3 but expected 5
+         Empty  returned 0 but expected 1

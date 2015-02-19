@@ -1,0 +1,38 @@
+Lab 04 - preparation
+----------
+
+Directory code_from_text/ contains the following files from Section 7.8 of your text:
+
+   QueueImplementation.c
+   QueueTypes.h
+   QueueInterface.h
+
+Minor changes were made to these files, such as:
+   -definition of SystemError function
+   -return codes for Insert and Remove
+   -the Queue holds integer items
+
+A simple driver program is in file:  SimpleQueueDriver.c
+Use separate compilation to create QueueImplementation.o and SimpleQueueDriver.o
+Compile the *.o files into an executable called SimpleQueueDriver
+Execute your SimpleQueueDriver to make sure it works!
+
+Create a driver program named QueueDriver.c to more thoroughly test the Queue 
+implementation.  (Do not alter the given Queue*.[ch] files. You must get your 
+driver to use the Q implementation via appropriate #include line(s) and compilation).
+Your driver should: 
+   a) create and initialize a Q 
+   b) insert some items into the Q
+   c) remove some items from the Q
+
+QueueDriver.c should check :
+   a) return codes of insert and remove (print message if fail)
+   b) remove gets the item you expect from the Q
+   c) the empty function returns true when the Q is supposed to be empty, and
+      false when the Q is supposed to contain items
+
+
+Use separate compilation to create QueueImplementation.o and QueueDriver.o
+Compile Queue*.o into an executable called QueueDriver
+Execute your QueueDriver to make sure it works!
+

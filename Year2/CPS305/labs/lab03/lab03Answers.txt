@@ -1,0 +1,14 @@
+1. S(0) = K
+   S(n) = S(n - 1) + K
+   Where K is a variable for memory.
+
+2. S(n) = S(n - 1) + K
+        = S(n - 2) + 2K
+	= S(n - 3) + 3K
+	.
+	.
+	.
+	= S(n - n) + nK
+	= S(0) + nK
+	= nK + K
+	O(n)

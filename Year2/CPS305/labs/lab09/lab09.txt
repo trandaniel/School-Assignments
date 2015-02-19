@@ -1,0 +1,41 @@
+CPS305 Lab09 
+------------
+
+For Fall 2014: 
+    Lab09 is submitted in your regular lab time (Nov 24 and 26). 
+
+
+0. Copy lab09answers.txt into your own filespace.
+   You will modify it by replacing "XXXX" (see below.)
+
+1. The following programs are given in this directory:
+      OpenAddrHash.c   - implementation of hashing ADT
+      OpenAddrHash.h   - header for hashing ADT
+      lab09L.c         - a main program that uses a hash table
+ 
+   Compile these into executable lab09L and run it. Understand what it does.
+  
+2. Copy lab09L.c to lab09D.c
+   Change lab09D.c so that it uses double hashing instead of the linear probe.
+   Use the quotient function (integer division) for p(K). 
+   Compile into executable lab09D and run it. 
+
+3. A collision happens when a key hashes into a slot that is ALREADY full. 
+   Figure out the number of number of collisions that happen when INSERTING
+   items into the hash tables in lab09L and lab09D.
+   You might find a 17-Times-Table useful. One is in: 17TimesTable.txt
+
+   (L) How many insertion collisions occurred in lab09L (linear probe)? 
+   (D) How many insertion collisions occurred in lab09D (double hashing)? 
+   (A) What is the load factor of the hash tables in percent?  Truncate your 
+       percentage to a whole number. E.g., if the load factor were .658117 
+       then your answer is 65
+
+4. Enter answers for (L), (D), and (A) above into lab09answers.txt, 
+   replacing the appropriate "XXXX" (no spaces!).
+
+5. Double-check your answers by modifying any code you need to (if you have
+   not already done so). Note: no code is to be submitted.
+
+6. Submit lab09answers.txt using the usual submit program
+

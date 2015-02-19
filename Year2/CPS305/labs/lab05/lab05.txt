@@ -1,0 +1,65 @@
+Lab 05
+------
+THIS LAB IS DUE THE WEEK OF OCT 27. 
+
+The labs during the week of Oct 20 are as follows:
+   Monday Oct 20. TAs in labs to answer your questions. 
+       12pm  ENG205 
+       01pm  ENG201 
+       02pm  ENG205 
+   Wed Oct 22. No labs. (This is midterm day)
+
+
+0. Your TA will tell you what XXXX is. It will be one of:
+   http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/Labs/Lab05/BST2.gif
+   http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/Labs/Lab05/bst1.jpg
+
+   Your TA will tell you what YYYY is. It will be one of:
+   http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/Labs/Lab05/EXPT1.jpg
+   http://www.scs.ryerson.ca/~dwoit/courses/cps305/coursedirPublic305/Labs/Lab05/EXPT2.jpg
+
+1. Consider the tree in file XXXX
+
+   a. Give a Level Order Traversal of the tree.
+   b. Give a Pre-Order Traversal of the tree.
+   c. Give a In-Order Traversal of the tree.
+   d. Give a Post-Order Traversal of the tree.
+
+2. Consider the expression tree in file YYYY:
+   What is the final result of evaluating the expression denoted by this tree?
+   (Give the final integer value).
+                                                                 
+3. Consider the BST in file XXXX:
+   Insert 18 into the tree. 
+   What node is 18's parent? is 18 the right- or left-child of its parent?
+
+4. Consider the BST in file XXXX:
+   Insert 21 into the ORIGINAL tree. 
+   What node is 21's parent? is 21 the right- or left-child of its parent?
+
+5. Consider the BST in file XXXX:
+   If your tree has a 19 in it:
+   If 19 were deleted from the ORIGINAL tree, what is 17's new right-child?
+   If your tree has a 20 in it:
+   If 20 were deleted from the ORIGINAL tree, what is the new root?
+
+6. Consider the BST in file XXXX:
+   If your tree has a 17 in it:
+   If 17 were deleted from the ORIGINAL tree, what are the 2 candidate nodes to replace it?
+   If your tree has a 20 in it:
+   If 8 were deleted from the ORIGINAL tree, what are the 2 candidate nodes to replace it?
+
+7. Look at the BST implementation and driver in /usr/courses/cps305/programs/BST/
+   Copy the code into your own filespace and modify BSTDriver.c so that it does some
+   successful and unsuccessful searches. 
+   For each search, BSTDriver must determine if the search was successful or unsuccessful 
+   by examining Search's return value.
+    -For a successful search, print out the actual "found" entry from the returned TreeNode
+     to double-check Search worked properly. 
+    -For each unsuccessful search, print out an appropriate message.
+   Note that this question (7) is not submitted.
+
+8. Type your answers from 1-6 above into a file named lab05Answers.txt
+   If an answer is not CLEARLY NUMBERED, it is worth zero marks.
+
+9. Submit lab05Answers.txt

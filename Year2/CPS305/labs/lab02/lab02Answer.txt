@@ -1,0 +1,25 @@
+1. small
+2. n = a
+3. int small(int a) {
+  //ASSUME a>0 always
+  int i=a; //A
+  int j=0; //B
+  int x=0; //C
+  int y=0; //D
+  int z;
+  for (;i>0;i--) {
+     x=x-i; //E, F
+  }
+  for (;j<=a;j++) {
+     y=y+j; //G, H
+  }
+  z=x+y; //I, J
+  return z;
+}
+
+
+T(n) = A + B + C + D + n(E + F) + n(G + H) + I + J // k1 = E + F, k2 = G + H, k3 = A + B + C + D + I + J
+     = k1n + k2n + k3
+     = n
+
+4. O(n) 
