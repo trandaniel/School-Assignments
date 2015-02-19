@@ -1,0 +1,105 @@
+Mar 25:
+
+Q: Assume that there is a file that has 145 numbers in it, rather than the
+  requested 144 (12*12).  The program could theoretically work with the first 
+  144 numbers it was given and produce a correct output.
+  Do we work with the given sufficient values, or do we declare an error?
+A: Work with the 144. Ignore the rest.
+
+Q: Assume that the input file has an excess/shortage of newline characters,
+   resulting in a file whose contents do not look like a square table.
+   Would a single line of 144 numbers be a valid input file?
+A: If the user does not supply the 144 numbers as an appropriate
+   12x12 grid, your program should let them know, and it may terminate.
+
+Q: Should our code strive to be accepting of scenarios that can result in a
+   output? (this would contradict the program's requirement to only have two
+   command-line arguments)
+A: Do not contradict the program's requirements.
+   If the program can read correct input, in the correct format, then it will
+   produce output.  If it can't, then it may terminate with an appropriate message.
+
+Mar 26:
+
+Q: What would the program's output look like?
+A: It must follow the requirements (e.g., taken from assign1.txt:
+     -Grids must be printed at the end each year
+     -Print  density values rounded to one decimal place
+   A run of the program might look like the following (but you might space
+   it differently):
+
+>./A1 3 weedInput1
+Read in these year 0 densities:
+  5.0   3.0   3.0   5.0   3.0   5.0   5.0   3.0   5.0   3.0   3.0   5.0
+  5.0   5.0   3.0   5.0   3.0   5.0   5.0   3.0   3.0   3.0   3.0   5.0
+  5.0   3.0   3.0   3.0   5.0   5.0   5.0   5.0   3.0   3.0   3.0   3.0
+  3.0   3.0   3.0   3.0   5.0   5.0   5.0   5.0   3.0   3.0   3.0   3.0
+  3.0   3.0   3.0   5.0   5.0   5.0   5.0   5.0   5.0   3.0   3.0   3.0
+  3.0   3.0   3.0   5.0   5.0   5.0   5.0   5.0   5.0   3.0   3.0   3.0
+  3.0   3.0   3.0   5.0   5.0   5.0   5.0   5.0   5.0   3.0   3.0   3.0
+  3.0   3.0   3.0   5.0   5.0   5.0   5.0   5.0   5.0   3.0   3.0   3.0
+  3.0   3.0   3.0   3.0   5.0   5.0   5.0   5.0   3.0   3.0   3.0   3.0
+  3.0   3.0   3.0   3.0   5.0   5.0   5.0   5.0   3.0   3.0   3.0   5.0
+  5.0   3.0   3.0   3.0   3.0   5.0   5.0   3.0   3.0   3.0   3.0   5.0
+  5.0   5.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   5.0
+The following is year 1:
+  5.0   3.0   3.0   5.0   3.0   5.0   5.0   3.0   5.0   3.0   3.0   5.0
+  5.0   3.8   3.8   3.8   4.2   4.6   4.6   3.8   3.4   3.0   3.4   5.0
+  5.0   3.8   3.0   3.8   4.2   5.0   5.0   4.2   3.4   3.0   3.0   3.0
+  3.0   3.0   3.0   3.8   4.6   5.0   5.0   4.6   3.8   3.0   3.0   3.0
+  3.0   3.0   3.4   4.2   5.0   5.0   5.0   5.0   4.2   3.4   3.0   3.0
+  3.0   3.0   3.4   4.6   5.0   5.0   5.0   5.0   4.6   3.4   3.0   3.0
+  3.0   3.0   3.4   4.6   5.0   5.0   5.0   5.0   4.6   3.4   3.0   3.0
+  3.0   3.0   3.4   4.2   5.0   5.0   5.0   5.0   4.2   3.4   3.0   3.0
+  3.0   3.0   3.0   3.8   4.6   5.0   5.0   4.6   3.8   3.0   3.0   3.0
+  3.0   3.0   3.0   3.4   4.2   5.0   5.0   4.2   3.4   3.0   3.4   5.0
+  5.0   3.8   3.0   3.0   3.8   4.2   4.2   3.8   3.0   3.0   3.4   5.0
+  5.0   5.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   5.0
+The following is year 2:
+  5.0   3.0   3.0   5.0   3.0   5.0   5.0   3.0   5.0   3.0   3.0   5.0
+  5.0   3.9   3.5   4.1   4.0   4.7   4.6   3.8   3.7   3.2   3.5   5.0
+  5.0   3.7   3.5   3.7   4.4   4.8   4.8   4.2   3.6   3.1   3.1   3.0
+  3.0   3.2   3.2   3.9   4.5   4.9   4.9   4.5   3.8   3.2   3.0   3.0
+  3.0   3.1   3.4   4.2   4.8   5.0   5.0   4.8   4.2   3.4   3.1   3.0
+  3.0   3.1   3.6   4.4   4.9   5.0   5.0   4.9   4.4   3.6   3.1   3.0
+  3.0   3.1   3.6   4.4   4.9   5.0   5.0   4.9   4.4   3.6   3.1   3.0
+  3.0   3.1   3.4   4.2   4.8   5.0   5.0   4.8   4.2   3.4   3.1   3.0
+  3.0   3.0   3.2   3.8   4.5   4.9   4.9   4.5   3.8   3.2   3.1   3.0
+  3.0   3.2   3.1   3.5   4.2   4.7   4.7   4.2   3.5   3.2   3.6   5.0
+  5.0   4.0   3.2   3.2   3.6   4.0   4.0   3.6   3.2   3.1   3.6   5.0
+  5.0   5.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   5.0
+The following is year 3:
+  5.0   3.0   3.0   5.0   3.0   5.0   5.0   3.0   5.0   3.0   3.0   5.0
+  5.0   3.8   3.6   4.1   4.0   4.6   4.6   3.9   3.8   3.3   3.5   5.0
+  5.0   3.8   3.5   3.9   4.3   4.7   4.6   4.2   3.7   3.2   3.1   3.0
+  3.0   3.2   3.4   3.9   4.5   4.8   4.8   4.4   3.9   3.3   3.1   3.0
+  3.0   3.1   3.5   4.1   4.7   4.9   4.9   4.7   4.1   3.5   3.1   3.0
+  3.0   3.2   3.6   4.3   4.8   5.0   5.0   4.8   4.3   3.6   3.2   3.0
+  3.0   3.2   3.6   4.3   4.8   5.0   5.0   4.8   4.3   3.6   3.2   3.0
+  3.0   3.1   3.5   4.1   4.7   4.9   4.9   4.7   4.1   3.5   3.1   3.0
+  3.0   3.1   3.3   3.8   4.4   4.8   4.8   4.4   3.8   3.3   3.2   3.0
+  3.0   3.2   3.2   3.6   4.1   4.5   4.5   4.1   3.6   3.3   3.7   5.0
+  5.0   4.1   3.3   3.3   3.6   3.9   3.9   3.6   3.3   3.2   3.6   5.0
+  5.0   5.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   3.0   5.0
+>
+
+Apr 2:
+
+Q: Our program is supposed to make a 12x12 grid, including perimeter.
+   The image in A1Figure3.jpg shows a 10x10 grid, including perimeter.
+   Was this supposed to be a 12x12 grid?
+A: The image in A1Figure3.jpg is a generic example. It is not meant
+   to represent the exact grid you will use in the assignment.
+   (Your actual grid would have 2 more inner (city) rows and columns.)
+
+Apr 3:
+
+Q: assign1.txt says: "Have NextDensities return an integer (see below)."
+   but I do not see anything below saying what it should return.
+A: assign1.txt has been amended to say that NextDensities should return
+   an int indicating whether or not steady-state has been reached.
+   The requirement that tolerance be "programmed so that it can be 
+   easily changed" gives a hint as to how NextDensities (or other 
+   functions) can use the tolerance without tolerance being one of the
+   function's arguments.
+

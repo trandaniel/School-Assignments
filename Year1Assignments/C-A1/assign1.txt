@@ -1,0 +1,158 @@
+
+CPS393 Assignment 1: Spread The Weed
+
+  -See A1Addendum.txt for modifications, QA, etc.
+
+  -This is an individual assignment (no group work permitted).
+  -submit using: submit-cps393
+  -submit one C program, named: A1.c
+  -include any unusual compilation instructions in comments at the start of A1.c
+
+
+A agricultural fringe group, known as STW (Spread The Weed), is an advocate for a 
+particular type of native Ontario weed, which they believe to be extremely beautiful.  
+This weed, however, is banned from the city of Milton.  STW's mission is to "seed" 
+Milton with this weed, so that all citizens may enjoy it.  Members of STW plan to 
+plant this weed around the perimeter of Milton (where doing so is legal), and some 
+members hope to covertly plant some weeds in the city limits.
+
+Before undertaking this mission, STW would like answers to the following questions:
+ -If we plant the weeds in a given initial pattern, how many years will it take for the
+  weed to reach a steady-state in Milton?
+ -If we plant the weeds in a given initial pattern, what will the distribution of weeds
+  look like in Milton after N years?
+
+STW knows this about the growth distribution of the weed:
+In any one square region, C, the weed-density in Year X+1 is the average of the 
+weed-densities from Year X of regions C,N,S,E,W, where each of C,N,S,E,W are the
+square regions as shown in Figure 1.
+
+  -|-----|-----|-----|-
+   |     |  N  |     |
+  -|-----|-----|-----|-
+   |  W  |  C  |  E  |
+  -|-----|-----|-----|-
+   |     |  S  |     |
+  -|-----|-----|-----|-
+     Figure 1.
+
+To help them answer their questions, STW hired a mathematics expert, who pointed out 
+that the calculations contain some dependencies. Consider Figure 2.
+The calculation for next year's density for region 7  involves regions: 3,7,6,8,11.
+The calculation for next year's density for region 11 involves regions: 7,10,11,12,15.
+So region 7 depends on region 11, but region 11 depends on region 7.
+Thus next year's densities for regions 7 and 11 will depend on the order in which the
+calculations for 7 and 11 were performed.
+
+
+  -|-----|-----|-----|-----|-
+   |  1  |  2  |  3  |  4  | 
+  -|-----|-----|-----|-----|-
+   |  5  |  6  |  7  |  8  | 
+  -|-----|-----|-----|-----|-
+   |  9  | 10  | 11  | 12  | 
+  -|-----|-----|-----|-----|-
+   | 13  | 14  | 15  | 16  | 
+  -|-----|-----|-----|-----|-
+      Figure 2.
+
+To avoid dependencies all together, the mathematician suggested differentiating between
+regions in Milton itself ("city" regions), and regions in the perimeter of Milton 
+("perimeter" regions), as shown in Figure 3, which is in:  
+    http://www.scs.ryerson.ca/~cps393/cps393/A1Figure3.jpg
+Perimeter regions are shown as grey, and city regions as black/white.
+
+The perimeter regions are outside Milton, so the members of STW could keep those 
+distributions at a constant level from year to year.  Thus the densities in the perimeter
+regions will not change from year to year, and it is never necessary to re-calculate their 
+yearly distributions. (The perimeter regions contribute to the calculations for the city 
+regions, however.)
+
+The density values in the city regions must be re-calculated each year. In order to 
+avoid dependencies, the mathematician suggested the following approach:
+  -Keep 2 different grids (gridA and gridB).
+  -Assume year i densities are in gridA. Then densities for year i+1 will be placed into
+   gridB, where the year i+1 density for each region in gridB is CALCULATED USING THE 
+   YEAR i DENSITIES FROM gridA.
+  -Thus, if the initial seeding (year 0) is in gridA, then densities for year 1 are
+   in gridB, densities for year 2 are in gridA, densities for year 3 are in gridB, etc.
+  -Grids must be printed at the end each year, because densities for year i will be
+   replaced with densities for year i+2.
+   
+The mathematician expects that when enough years pass, the values in the city regions 
+will converge to a distribution reflective of the fixed values of the perimeter regions.
+Thus, STW will be able to accomplish their mission of weeding-up Milton, without 
+breaking the law (except possibly in year 0--the initial seeding).
+
+You have been hired to write a program to answer STW's questions.  
+Your program MUST adhere to these conditions:
+
+  DENSITY VALUES. Your program must:
+  -Assume density values are in percent (i.e., values in the range [0-100]).
+  -Store  density values as doubles. 
+  -Print  density values rounded to one decimal place. e.g., the value 74.45 is 
+   printed as: 74.5; the value 74.44 is printed as: 74.4
+
+  GRID. Your program must: 
+  -Divide Milton into a square grid of regions.
+  -Divide Milton into 100 city regions (a 10x10 grid). 
+  -Have the perimeter regions encompass the city regions, thus making the entire 
+   grid 12x12). 
+  -Code the grid dimension (12) so that it could be easily changed. 
+
+  BEHAVIOR. Your program must: 
+  -Compile and work on a CS moon.
+  -Be ROBUST (handle error conditions gracefully), printing appropriate error 
+   messages to stderr.
+  -Use NO global variables (but use #define appropriately)
+  -Use the mathematician's 2-grid approach. 
+  -Use a function named NextDensities(fromGrid, toGrid) which uses densities in
+   fromGrid (assumed to be year i) to calculate densities for year i+1 which are
+   placed in toGrid.
+  -Have NextDensities return an integer indicating whether or not steady-state
+   has been reached (see "Consider steady-state" below).
+  -Read initial density grid (year 0) from stdin, as a 12x12 set of numbers, with
+   each number in the range [0-100]. Example input is given in file weedInput1
+
+  -Take two command-line arguments, as follows: 
+     The number of years to calculate (N).
+     The name of an input file containing the year 0 grid values.
+  -Check that exactly 2 command line arguments are present and valid; if not, 
+   appropriate message to stderr and exit with appropriate code.
+  -Print the initial (year 0) density grid, and then re-print the grid after 
+   each year (indicating current year). 
+  -Whenever a grid is printed, include the perimeter regions (print 12x12 grid).
+  -Terminate early (before N years have elapsed) only if the densities reach 
+   steady-state before N years. In this case, before terminating, print the following 
+   message on stdout (with appropriate value for X): 
+      "steady-state reached after X years"
+  -Consider steady-state to be reached when EVERY density value in year X+1 is
+   unchanged from year X, where "unchanged" means a difference of less than plus 
+   or minus .01 from the previous year's value. The value .01 is known as a 
+   "tolerance", and must be programmed so that it can be easily changed. The fabs 
+   function in math.h is useful. 
+
+
+  RUNNING THE PROGRAM.
+  -The members of STW can answer their questions by running your program with 
+   various values of N (the command line argument) and various input files (each 
+   containing a 12x12 grid of density values).
+   If they are interested in knowing how many years it takes to reach steady-state, 
+   they can simply run the program with larger and larger N values until the program 
+   prints the "steady-state" message.
+  -An example of running the program is:
+      > A1 100 weedInput1 
+
+
+
+
+Grading:
+The program will be graded on various factors including the following:
+   Input and output handling (e.g., handling file, command line arguments, etc.)
+   Robustness (e.g., including stderr messages when file not readable, 
+               improper command line argument(s), etc.)
+   Modularity (e.g., good use of functions, etc.) 
+   Algorithms (e.g., efficient computations, etc.)
+   Style and Documentation (e.g., indentation, formatting, use of whitespace,
+              meaningful variable names, sparse but useful comments etc.)
+
