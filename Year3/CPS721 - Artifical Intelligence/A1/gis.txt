@@ -1,0 +1,19 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+?- eastOf(queen, christie).
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- southOf(queen, christie).
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- eastOf(king, bathurst).
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- northOf(bay, king).
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- southOf(king, yongebloor).
+Yes (0.00s cpu, solution 1, maybe more)

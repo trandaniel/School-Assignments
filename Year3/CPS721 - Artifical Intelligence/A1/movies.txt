@@ -1,0 +1,81 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+?- directs(carolynWang, wangVsWong).
+No (0.00s cpu)
+
+?- directs(P, battleOfTheStumps).
+P = nikkiWong
+Yes (0.00s cpu)
+
+?- actsIn(Actor, wangVsWong), actsIn(Actor, wangman).
+No (0.00s cpu)
+
+?- released(Movie, 2017), not actsIn(balinBanh, Movie), not actsIn(carolynWang, Movie).
+Movie = beverlily2
+Yes (0.00s cpu)
+
+?- directs(Director, Movie), directs(Director2, Movie), not Director = Director2.
+No (0.00s cpu)
+
+?- directs(Director, wangalanger), X is 2000, released(Movie, Year), Year >= X, directs(Director, Movie).
+Director = nikkiWong
+X = 2000
+Movie = wangalanger
+Year = 2016
+Yes (0.00s cpu, solution 1, maybe more)
+Director = nikkiWong
+X = 2000
+Movie = battleOfTheStumps
+Year = 2018
+Yes (0.09s cpu, solution 2)
+
+?- actsIn(Actor, Movie), actsIn(Actor, Movie2), actsIn(Actor, Movie3), released(Movie, Year), released(Movie2, Year), released(Movie3, Year), not Movie = Movie2, not Movie = Movie3, not Movie2 = Movie3.
+No (0.00s cpu)
+
+?- directs(Director, Movie), actsIn(Actor, Movie), released(Movie, Year), directs(Director, Movie2), actsIn(Actor, Movie2), released(Movie2, Year2), not Year = Year2, not Movie = Movie2.
+Director = carolynWang
+Movie = wangdanger
+Actor = carolynWang
+Year = 2018
+Movie2 = wangman
+Year2 = 2017
+Yes (0.00s cpu, solution 1, maybe more)
+Director = carolynWang
+Movie = wangman
+Actor = carolynWang
+Year = 2017
+Movie2 = wangdanger
+Year2 = 2018
+Yes (0.00s cpu, solution 2, maybe more)
+Director = beverlyLi
+Movie = beverlily
+Actor = beverlyLi
+Year = 2016
+Movie2 = beverlily2
+Year2 = 2017
+Yes (0.00s cpu, solution 3, maybe more)
+Director = beverlyLi
+Movie = beverlily2
+Actor = beverlyLi
+Year = 2017
+Movie2 = beverlily
+Year2 = 2016
+Yes (0.00s cpu, solution 4, maybe more)
+No (0.00s cpu)
+
+?- directs(Director, Movie), released(Movie, 2008), not (directs(Director, Movie2), released(Movie2, 2008), not Movie2 = Movie).
+Director = christopherNolan
+Movie = theDarkKnight
+Movie2 = Movie2
+Yes (0.00s cpu)
+
+?- released(Movie, Year), \+ (released(Movie2, Year2), Movie \= Movie2, Year2 < Year).
+Movie = theGodfather
+Year = 1972
+Movie2 = Movie2
+Year2 = Year2
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.05s cpu)

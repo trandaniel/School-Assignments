@@ -1,0 +1,113 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+%Q1 Tests
+
+?- nth(1, [a], a).
+Yes (0.00s cpu, solution 1, maybe more)
+Yes (0.00s cpu, solution 2, maybe more)
+No (0.00s cpu)
+
+?- nth(3, [a, b, c], c).
+Yes (0.00s cpu, solution 1, maybe more)
+Yes (0.00s cpu, solution 2, maybe more)
+No (0.00s cpu)
+
+?- nth(3, [a, b, c], X).
+X = c
+Yes (0.00s cpu, solution 1, maybe more)
+X = c
+Yes (0.02s cpu, solution 2, maybe more)
+No (0.02s cpu)
+
+?- nth(0, [a, b, c], X).
+No (0.00s cpu)
+
+?- nth(0, [], X).
+No (0.00s cpu)
+
+?- nth(2, [], X).
+No (0.00s cpu)
+
+?- nth(2, [a], X).
+No (0.00s cpu)
+
+%Q2 Tests
+
+?- remove(a, [c, a, n, a, d, a], [c, n, d]).
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+?- remove(a, [c, a, n, a, d, a], X).
+X = [c, n, d]
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+?- remove(a, [], [a]).
+No (0.00s cpu)
+
+?- remove(a, [[d, e, f], [a, a]], [[d, e, f], [a, a]]).
+Yes (0.00s cpu)
+
+?- remove([], [[]], X).
+X = []
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.02s cpu)
+
+%Q3 Tests
+
+?- splitEvenOdd([22, 9, 11, 400, 0], X, Y).
+X = [22, 400, 0]
+Y = [9, 11]
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+?- splitEvenOdd([], [H|T], X).
+No (0.00s cpu)
+
+?- splitEvenOdd([33], [], [33]).
+Yes (0.00s cpu)
+
+?- splitEvenOdd([1, 2, 3, 4, 5, 1, 2, 3, 4, 5], X, Y).
+X = [2, 4, 2, 4]
+Y = [1, 3, 5, 1, 3, 5]
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.02s cpu)
+
+%Q4 Tests
+
+?- lessThanEq([], [a, b, c], [k, l, m, n]).
+Yes (0.00s cpu)
+
+?- lessThanEq([H|T], [], []).
+Abort
+
+?- lessThanEq([a, b], [a], [a, [], a]).
+Yes (0.00s cpu)
+
+?- lessThanEq([[1, 2, 3]], [[1], [2], [3]], [1, 2, 3]).
+No (0.00s cpu)
+
+%Q5 Tests
+
+?- row(5, R).
+R = [1, 5, 10, 10, 5, 1]
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- row(9, R).
+R = [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- row(11, R).
+R = [1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1]
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- row(1, R).
+R = [1, 1]
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- row(0, R).
+R = [1]
+Yes (0.00s cpu, solution 1, maybe more)

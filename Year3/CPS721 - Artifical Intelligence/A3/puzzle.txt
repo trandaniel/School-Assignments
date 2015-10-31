@@ -1,0 +1,46 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+%Computer hardware information:
+%CPU: Intel(R) Core(TM) i5-4670 CPU @ 3.40 GHz (4CPUs), ~3.4GHz
+%RAM: 8192 MB (8GB).
+%OS: Windows 7 Home Premium 64-bit (6.1, Build 7601)
+%Running solve1(L) before optimization 
+
+?- cputime(S), solve1(L), cputime(F), T is F - S.
+S = 55.723
+L = [9, 6, 2, 3, 5, 1, 8, 7, 4]
+F = 105.94
+T = 50.217
+Yes (50.22s cpu, solution 1, maybe more)
+No (52.46s cpu)
+
+%Running solve2(L) after optimization
+
+?- cputime(S), solve2(L), cputime(F), T is F - S.
+S = 108.373
+L = [9, 6, 2, 3, 5, 1, 8, 7, 4]
+F = 108.373
+T = 0.0
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+%Running the print function with solve2
+
+%In results window
+
+?- cputime(S), print_solution, cputime(F), T is F - S.
+S = 108.451
+F = 108.451
+T = 0.0
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.11s cpu)
+
+%In output window
+
+ 96233
++62513
+______
+158746

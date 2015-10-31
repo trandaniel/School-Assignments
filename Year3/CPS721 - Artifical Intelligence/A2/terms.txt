@@ -1,0 +1,41 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+%Tests for qs.pl
+
+?- qs(next(1, next(5, next(3, next(0, next(9, next(10, nil)))))), R).
+R = next(0, next(1, next(3, next(5, next(9, next(10, nil))))))
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+?- qs(next(7, next(1, next(5, next(0, next(9, nil))))), R).
+R = next(0, next(1, next(5, next(7, next(9, nil)))))
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+?- qs(next(nil, nil), R).
+R = next(nil, nil)
+Yes (0.00s cpu)
+
+?- qs(next(1, nil), R).
+R = next(1, nil)
+Yes (0.00s cpu)
+
+%Tests for subsFirst.pl
+
+?- subsFirst(1, 2, tree(3, tree(3, tree(4, void, void, void), void, void), void, tree(1, void, void, void)), O).
+O = tree(3, tree(3, tree(4, void, void, void), void, void), void, tree(2, void, void, void))
+Yes (0.00s cpu, solution 1, maybe more)
+
+
+?- subsFirst(1, 2, tree(3, tree(3, tree(4, void, void, void), tree(1, void, void, void), void), void, tree(1, void, void, void)), O).
+O = tree(3, tree(3, tree(4, void, void, void), tree(2, void, void, void), void), void, tree(1, void, void, void))
+Yes (0.00s cpu, solution 1, maybe more)
+
+?- subsFirst(1, 2, void, void).
+Yes (0.00s cpu, solution 1, maybe more)
+Yes (0.14s cpu, solution 2)
+
+

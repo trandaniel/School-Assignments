@@ -1,0 +1,50 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+%using solve1 - solving using words
+
+?- solve1(L).
+L = [[s, a, c], [a, g, o], [p, e, g], [s, a, p], [a, g, e], [c, o, g]]
+Yes (0.80s cpu, solution 1, maybe more)
+L = [[s, a, p], [a, g, e], [c, o, g], [s, a, c], [a, g, o], [p, e, g]]
+Yes (0.81s cpu, solution 2, maybe more)
+No (0.92s cpu)
+
+%using solve2 - solving using letters
+
+?- solve2(L).
+L = [[s, a, c], [a, g, o], [p, e, g], [s, a, p], [a, g, e], [c, o, g]]
+Yes (0.62s cpu, solution 1, maybe more)
+L = [[s, a, p], [a, g, e], [c, o, g], [s, a, c], [a, g, o], [p, e, g]]
+Yes (0.64s cpu, solution 2, maybe more)
+No (0.73s cpu)
+
+%using print_solution
+
+?- print_solution.
+Yes (0.78s cpu, solution 1, maybe more)
+Yes (0.81s cpu, solution 2, maybe more)
+No (0.92s cpu)
+
+%output window
+
+[s, a, c]
+[a, g, o]
+[p, e, g]
+Row 1: [s, a, c]
+Row 2: [a, g, o]
+Row 3: [p, e, g]
+Col 1: [s, a, p]
+Col 2: [a, g, e]
+Col 3: [c, o, g]
+[s, a, p]
+[a, g, e]
+[c, o, g]
+Row 1: [s, a, p]
+Row 2: [a, g, e]
+Row 3: [c, o, g]
+Col 1: [s, a, c]
+Col 2: [a, g, o]
+Col 3: [p, e, g]

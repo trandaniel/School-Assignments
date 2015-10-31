@@ -1,0 +1,96 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+ 1. 
+
+Simplify.
+
+[mth110 | [mth210 | [cps305 | [cps721 | CPS822]] ] ] 
+[mth110, mth210 | [cps305 | [cps721 | CPS822]] ]
+[mth110, mth210, cps305 | [cps721 | CPS822]]
+ [P,R,Q | AI] 
+
+P = mth110
+R = mth210
+Q = cps305
+AI = [cps721, CPS822]
+
+2.
+ 
+[List | [List, a,b,c]] and [[], Z | U] 
+Simplify.
+[List, List, a, b, c] 
+List = [] Z | U = [List, a, b, c]
+Z = List = []
+U = a, b, c
+
+3. 
+[U,[W|U],a,b] and [Z | [ [a|[b] ] | W ] ]
+
+Simplify.
+[Z | [ [ a | [ b ] ] | W ] ]
+[Z | [ [ a , b ] | W ] ]
+[Z , [ a , b ] | W]
+
+
+U = []
+Z = []
+W = [a,b]
+
+4. 
+
+[Var | U] and [http, www | [ryerson, ca]] 
+
+Simplify.
+[http, www | [ryerson, ca]]
+[http, www, ryerson, ca]
+[http | [www, ryerson, ca]]
+
+var = http
+U = [www, ryerson, ca]
+
+
+5. 
+
+[k,p|U] and [k,W,m,n,[W|[c]]] 
+No need for simplification.
+
+W = p
+U = [m, n, [W | [c]]] = [m, n, [p | [c]]]
+
+6.
+[U|W] and [W|[[]|U]] 
+
+Simplify.
+[W|[[]|U]]
+[W, [] | U]
+[W, U] ≠ [U | W]
+
+Does not match for all cases. It will only match iff U and W are single element lists.
+
+7. 
+[myself, Q | [P | U]] and [W | [[vars| [P]] | [myself | Q]]]
+
+Simplify both.
+
+[myself, Q | [P | U]]
+
+[W, [vars | [P]] | [myself | Q]]]
+[W, [vars | [P]] | [myself | Q]]
+
+W = myself
+Q = [vars | [P]] = [vars | [myself]]
+P = myself
+U = Q = [vars | [myself]]
+
+8. 
+[k, [Q | [l,m]], tree | [book | Z]] and [P, U | [R,Q,n]] 
+
+Simplify both.
+[k, [Q | [l,m]], tree | [book | Z]] = [k, [Q, l, m], tree, book | Z]
+
+[P, U | [R,Q,n]] = [P, U, R, Q, n]
+
+Too many variables, not enough elements. Mismatch. 

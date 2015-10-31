@@ -1,0 +1,26 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+?- sumAssignments(Q).
+Q = 16.56
+Yes (0.00s cpu)
+
+?- sumQuizzes(Q).
+Q = 9.0
+Yes (0.00s cpu)
+
+?- grade(G).
+G = 84.56
+Yes (0.00s cpu)
+
+?- grade(G), letter(L, G).
+G = 84.56
+L = "A-"
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.05s cpu)
+
+?- letter(L, 30).
+L = "F"
+Yes (0.00s cpu)

@@ -1,0 +1,38 @@
+%Student, Section, CSID, SID
+%Daniel Tran, 02, d45tran, 500554290
+%Samuel Dindyal, 03, s2dindya, 500592528
+%Balin Banh, 03, b2banh, 500574970
+
+%Solving using only solve(L)
+
+?- solve(L).
+L = [5, 2, 3, 4, 1, 1, 5, 3, 2, 4, 3, 5, 1, 4, 2]
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+%solving with print 
+
+?- solve(L), print_solution(L).
+L = [5, 2, 3, 4, 1, 1, 5, 3, 2, 4, 3, 5, 1, 4, 2]
+Yes (0.00s cpu, solution 1, maybe more)
+
+%output window
+
+Caller 1: Emily, Gigantic pizza with Mushroom
+Caller 2: Rob, Medium pizza with Onion
+Caller 3: Ben, Large pizza with Pepperoni
+Caller 4: Mary, Extra Large pizza with Cheese
+Caller 5: Cindy, Small pizza with Sausage
+
+%printing solution with no list as input
+
+?- print_solution.
+Yes (0.00s cpu, solution 1, maybe more)
+
+%output 
+
+Caller 1: Emily, Gigantic pizza with Mushroom
+Caller 2: Rob, Medium pizza with Onion
+Caller 3: Ben, Large pizza with Pepperoni
+Caller 4: Mary, Extra Large pizza with Cheese
+Caller 5: Cindy, Small pizza with Sausage
