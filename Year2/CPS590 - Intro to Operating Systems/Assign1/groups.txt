@@ -1,0 +1,50 @@
+
+When working in groups, designate ONE member as the "Submit-Person".
+
+SUBMIT-PERSON SUBMITS:
+---------------------
+
+  A1.c           (see assign1.txt)
+  A1cert.txt     (see below for content)
+  A1member.txt   (see below for content)
+
+EACH OTHER GROUP MEMBER SUBMITS only her/his own:
+-----------------------------------------------
+
+  A1member.txt   (see below for content)
+
+
+A1member.txt
+------------
+-contains the following lines: 
+     your name, 
+     your CS userid, 
+     your section,
+     your student ID number, 
+     your TA(s), 
+     your lab day/time
+     Name and CS userid of your group's Submit Person
+     Name and CS userid of each remaining group member
+     
+
+A1cert.txt
+----------
+Must contain exactly ONE OF the following 3 lines: 
+-------------------------------------------------------------------------
+  1. I certify this assign is entirely my group's own work.
+  2. I certify this assign is entirely my group's own work, but we received minor assistance 
+     from other students.
+  3. I certify this assign is entirely my group's own work, but we received considerable 
+     assistance from X 
+-------------------------------------------------------------------------
+  -It is OK to get help from others, as long as they help you do your own work. 
+  -There is no problem if you put the second one above on your work. In fact, I expect it.
+  -X should be the name of whomever assisted you, or a resource such as a website.  
+   Doing your own work is important, but being honest about the origin of the work is an 
+   essential part of professional integrity.
+
+How to get zero on the assignment:
+---------------------------------
+  -one or more members forget or have incorrect A1member.txt file(s), and/or
+  -a non-Submit-Person also submits file(s) OTHER than A1member.txt
+  -any files are named wrong (wrong case, missing .txt, etc.)

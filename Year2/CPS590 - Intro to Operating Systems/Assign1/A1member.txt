@@ -1,0 +1,12 @@
+Name: 		Daniel Tran
+CS ID:		d45tran
+Section:	03
+SID:		500554290
+TA:		Haleh Khojasteh
+LabTime:	Monday 4-5pm
+Submit:		Daniel Tran - d45tran
+
+Members:	Austin Tam - a36tam
+		Dan Nguyen - dhnguyen
+		Tevin Luu - twluu
+		Balin Banh - b2banh
