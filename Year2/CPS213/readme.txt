@@ -1,1 +1,0 @@
-All CPS213 labs were done in multimedia logic
