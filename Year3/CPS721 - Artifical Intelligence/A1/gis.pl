@@ -1,8 +1,3 @@
-%Student, Section, CSID, SID
-%Daniel Tran, 02, d45tran, 500554290
-%Samuel Dindyal, 03, s2dindya, 500592528
-%Balin Banh, 03, b2banh, 500574970
-
 :- discontiguous(northOf/2) .
 :- discontiguous(southOf/2) .
 :- discontiguous(eastOf/2) .
