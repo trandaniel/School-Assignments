@@ -1,8 +1,3 @@
-%Student, Section, CSID, SID
-%Daniel Tran, 02, d45tran, 500554290
-%Samuel Dindyal, 03, s2dindya, 500592528
-%Balin Banh, 03, b2banh, 500574970
-
 word([a,d,d]).	word([a,d,o]).	word([a,g,e]).
 word([a,g,o]).	word([a,i,d]).	word([a,i,l]).	word([a,i,m]).
 word([a,i,r]).	word([a,n,d]).	word([a,n,y]).	word([a,p,e]).
